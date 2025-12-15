@@ -202,6 +202,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btn1_1">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn1_1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn1_2">
               <Properties>
@@ -219,6 +222,9 @@
                   <Image iconType="3" name="/kepek/piros.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn1_3ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn1_4">
               <Properties>
@@ -226,8 +232,14 @@
                   <Image iconType="3" name="/kepek/zold.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn1_4ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn2_1">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn2_1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn2_2">
               <Properties>
@@ -245,6 +257,9 @@
                   <Image iconType="3" name="/kepek/piros.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn2_3ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn2_4">
               <Properties>
@@ -252,6 +267,9 @@
                   <Image iconType="3" name="/kepek/zold.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn2_4ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn3_2">
               <Properties>
@@ -269,8 +287,14 @@
                   <Image iconType="3" name="/kepek/kek.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn3_3ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn4_1">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn4_1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn3_4">
               <Properties>
@@ -278,12 +302,24 @@
                   <Image iconType="3" name="/kepek/kek.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn3_4ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn3_1">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn3_1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn4_2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn4_2ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn4_3">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn4_3ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn4_4">
               <Events>

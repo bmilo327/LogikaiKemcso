@@ -3,6 +3,7 @@ package main;
 
 import javax.swing.Icon;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 
 public class Jatek extends javax.swing.JFrame {
@@ -52,6 +53,12 @@ public class Jatek extends javax.swing.JFrame {
 
         lblLeiras.setText("Válaszd ki az egyik oszlop legfelső elemét!");
 
+        btn1_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn1_1ActionPerformed(evt);
+            }
+        });
+
         btn1_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kepek/kek.png"))); // NOI18N
         btn1_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,8 +67,24 @@ public class Jatek extends javax.swing.JFrame {
         });
 
         btn1_3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kepek/piros.png"))); // NOI18N
+        btn1_3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn1_3ActionPerformed(evt);
+            }
+        });
 
         btn1_4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kepek/zold.png"))); // NOI18N
+        btn1_4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn1_4ActionPerformed(evt);
+            }
+        });
+
+        btn2_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn2_1ActionPerformed(evt);
+            }
+        });
 
         btn2_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kepek/zold.png"))); // NOI18N
         btn2_2.addActionListener(new java.awt.event.ActionListener() {
@@ -71,8 +94,18 @@ public class Jatek extends javax.swing.JFrame {
         });
 
         btn2_3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kepek/piros.png"))); // NOI18N
+        btn2_3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn2_3ActionPerformed(evt);
+            }
+        });
 
         btn2_4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kepek/zold.png"))); // NOI18N
+        btn2_4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn2_4ActionPerformed(evt);
+            }
+        });
 
         btn3_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kepek/piros.png"))); // NOI18N
         btn3_2.addActionListener(new java.awt.event.ActionListener() {
@@ -82,8 +115,42 @@ public class Jatek extends javax.swing.JFrame {
         });
 
         btn3_3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kepek/kek.png"))); // NOI18N
+        btn3_3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn3_3ActionPerformed(evt);
+            }
+        });
+
+        btn4_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn4_1ActionPerformed(evt);
+            }
+        });
 
         btn3_4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kepek/kek.png"))); // NOI18N
+        btn3_4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn3_4ActionPerformed(evt);
+            }
+        });
+
+        btn3_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn3_1ActionPerformed(evt);
+            }
+        });
+
+        btn4_2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn4_2ActionPerformed(evt);
+            }
+        });
+
+        btn4_3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn4_3ActionPerformed(evt);
+            }
+        });
 
         btn4_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -244,66 +311,22 @@ public class Jatek extends javax.swing.JFrame {
     String aktiv = "";
     int klikk = 0;
     /*számozás: oszlop_sor*/
-    private void btn1_1ActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        aktivGomb = btn1_1;
-        gombKezelo(btn1_1);
-    }
     
     private void btn1_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1_2ActionPerformed
         aktivGomb = btn1_2;
         gombKezelo(btn1_2);
     }//GEN-LAST:event_btn1_2ActionPerformed
     
-    private void btn1_3ActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        aktivGomb = btn1_3;
-        gombKezelo(btn1_3);
-    }
-    
-    private void btn1_4ActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        aktivGomb = btn1_4;
-        gombKezelo(btn1_4);
-    }
-    
-    private void btn2_1ActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        aktivGomb = btn2_1;
-        gombKezelo(btn2_1);
-    }
-    
     private void btn2_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2_2ActionPerformed
         aktivGomb = btn2_2;
         gombKezelo(btn2_2);
     }//GEN-LAST:event_btn2_2ActionPerformed
-
-    private void btn2_3ActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        aktivGomb = btn2_3;
-        gombKezelo(btn2_3);
-    }
-    
-    private void btn2_4ActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        aktivGomb = btn2_4;
-        gombKezelo(btn2_4);
-    }
-    
-    private void btn3_1ActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        aktivGomb = btn3_1;
-        gombKezelo(btn3_1);
-    }
     
     private void btn3_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3_2ActionPerformed
         aktivGomb = btn3_2;
         gombKezelo(btn3_2);
     }//GEN-LAST:event_btn3_2ActionPerformed
-
-    private void btn3_3ActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        aktivGomb = btn3_3;
-        gombKezelo(btn3_3);
-    }
-    
-    private void btn3_4ActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        aktivGomb = btn3_4;
-        gombKezelo(btn3_4);
-    }
-    
+   
     private void gombKezelo(JButton gomb){                                       
         Icon ikon = gomb.getIcon();
         if(ikon != null){
@@ -339,10 +362,68 @@ public class Jatek extends javax.swing.JFrame {
     private void btn4_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4_4ActionPerformed
         aktivGomb = btn4_4;
         gombKezelo(aktivGomb);
-        
-        
     }//GEN-LAST:event_btn4_4ActionPerformed
 
+    private void btn1_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1_1ActionPerformed
+        figyelmeztetes();
+    }//GEN-LAST:event_btn1_1ActionPerformed
+
+    private void btn2_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2_1ActionPerformed
+        figyelmeztetes();
+    }//GEN-LAST:event_btn2_1ActionPerformed
+
+    private void btn3_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3_1ActionPerformed
+        figyelmeztetes();
+    }//GEN-LAST:event_btn3_1ActionPerformed
+
+    private void btn4_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4_1ActionPerformed
+        figyelmeztetes();
+    }//GEN-LAST:event_btn4_1ActionPerformed
+
+    private void btn1_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1_3ActionPerformed
+        aktivGomb = btn1_3;
+        gombKezelo(aktivGomb);// TODO add your handling code here:
+    }//GEN-LAST:event_btn1_3ActionPerformed
+
+    private void btn2_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2_3ActionPerformed
+        aktivGomb = btn2_3;
+        gombKezelo(aktivGomb);// TODO add your handling code here:
+    }//GEN-LAST:event_btn2_3ActionPerformed
+
+    private void btn3_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3_3ActionPerformed
+        aktivGomb = btn3_3;
+        gombKezelo(aktivGomb);// TODO add your handling code here:
+    }//GEN-LAST:event_btn3_3ActionPerformed
+
+    private void btn4_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4_2ActionPerformed
+        aktivGomb = btn4_2;
+        gombKezelo(aktivGomb);// TODO add your handling code here:
+    }//GEN-LAST:event_btn4_2ActionPerformed
+
+    private void btn4_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4_3ActionPerformed
+        aktivGomb = btn4_3;
+        gombKezelo(aktivGomb);// TODO add your handling code here:
+    }//GEN-LAST:event_btn4_3ActionPerformed
+
+    private void btn1_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1_4ActionPerformed
+        aktivGomb = btn1_4;
+        gombKezelo(aktivGomb);// TODO add your handling code here:
+    }//GEN-LAST:event_btn1_4ActionPerformed
+
+    private void btn2_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2_4ActionPerformed
+        aktivGomb = btn2_4;
+        gombKezelo(aktivGomb);// TODO add your handling code here:
+    }//GEN-LAST:event_btn2_4ActionPerformed
+
+    private void btn3_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3_4ActionPerformed
+        aktivGomb = btn3_4;
+        gombKezelo(aktivGomb);// TODO add your handling code here:
+    }//GEN-LAST:event_btn3_4ActionPerformed
+    
+    void figyelmeztetes(){
+        JOptionPane.showMessageDialog(rootPane, "Ez a gomb nem választható");
+    }
+    
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
