@@ -1,6 +1,7 @@
 
 package main;
 
+import javax.swing.Icon;
 import javax.swing.JButton;
 
 
@@ -238,99 +239,108 @@ public class Jatek extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    JButton gomb = null;
+    JButton aktivGomb = null;
+    JButton elozoGomb = null;
     String aktiv = "";
     int klikk = 0;
     /*számozás: oszlop_sor*/
     private void btn1_1ActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        gomb = btn1_1;
+        aktivGomb = btn1_1;
         gombKezelo(btn1_1);
     }
     
     private void btn1_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1_2ActionPerformed
-        gomb = btn1_2;
+        aktivGomb = btn1_2;
         gombKezelo(btn1_2);
     }//GEN-LAST:event_btn1_2ActionPerformed
     
     private void btn1_3ActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        gomb = btn1_3;
+        aktivGomb = btn1_3;
         gombKezelo(btn1_3);
     }
     
     private void btn1_4ActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        gomb = btn1_4;
+        aktivGomb = btn1_4;
         gombKezelo(btn1_4);
     }
     
     private void btn2_1ActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        gomb = btn2_1;
+        aktivGomb = btn2_1;
         gombKezelo(btn2_1);
     }
     
     private void btn2_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2_2ActionPerformed
-        gomb = btn2_2;
+        aktivGomb = btn2_2;
         gombKezelo(btn2_2);
     }//GEN-LAST:event_btn2_2ActionPerformed
 
     private void btn2_3ActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        gomb = btn2_3;
+        aktivGomb = btn2_3;
         gombKezelo(btn2_3);
     }
     
     private void btn2_4ActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        gomb = btn2_4;
+        aktivGomb = btn2_4;
         gombKezelo(btn2_4);
     }
     
     private void btn3_1ActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        gomb = btn3_1;
+        aktivGomb = btn3_1;
         gombKezelo(btn3_1);
     }
     
     private void btn3_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3_2ActionPerformed
-        gomb = btn3_2;
+        aktivGomb = btn3_2;
         gombKezelo(btn3_2);
     }//GEN-LAST:event_btn3_2ActionPerformed
 
     private void btn3_3ActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        gomb = btn3_3;
+        aktivGomb = btn3_3;
         gombKezelo(btn3_3);
     }
     
     private void btn3_4ActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        gomb = btn3_4;
+        aktivGomb = btn3_4;
         gombKezelo(btn3_4);
     }
     
     private void gombKezelo(JButton gomb){                                       
-        String szoveg = gomb.getIcon().toString();
-        char elsoBetu = szoveg.substring(szoveg.lastIndexOf("/") + 1).charAt(0);
-        aktiv = elsoBetu+"";
-        String szin = "";
-        lblLeiras.setText("Jelöld, hogy hova rakod!");
-        if (aktiv.equals("k")){
-            szin = "kék";
-        }else if (aktiv.equals("p")){
-            szin = "piros";
-        }else if (aktiv.equals("z")){
-            szin = "zöld";
+        Icon ikon = gomb.getIcon();
+        if(ikon != null){
+            String szoveg = ikon.toString();
+            char elsoBetu = szoveg.substring(szoveg.lastIndexOf("/") + 1).charAt(0);
+            aktiv = elsoBetu+"";
+            String szin = "";
+            lblLeiras.setText("Jelöld, hogy hova rakod!");
+            if (aktiv.equals("k")){
+                szin = "kék";
+            }else if (aktiv.equals("p")){
+                szin = "piros";
+            }else if (aktiv.equals("z")){
+                szin = "zöld";
+            }
+            elozoGomb = gomb;
+            lblKivalasztva.setText("Kiválsztva: " + szin);
+            klikk++;
+            lblLepesSzam.setText("Lépések száéma: " + klikk);
+        }else{
+            if(aktiv.equals("k")){
+                gomb.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kepek/kek.png")));
+            }else if(aktiv.equals("z")){
+                gomb.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kepek/zold.png")));
+            }else if(aktiv.equals("p")){
+                gomb.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kepek/piros.png")));
+            }
+            aktiv = "";
+            elozoGomb.setIcon(null);
         }
-        lblKivalasztva.setText("Kiválsztva: " + szin);
-        klikk++;
-        lblLepesSzam.setText("Lépések száéma: " + klikk);
     }
         
     private void btn4_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4_4ActionPerformed
-        if(aktiv.equals("k")){
-            btn4_4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kepek/kek.png")));
-        }else if(aktiv.equals("z")){
-            btn4_4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kepek/zold.png")));
-        }else if(aktiv.equals("p")){
-            btn4_4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kepek/piros.png")));
-        }
-        aktiv = "";
-        gomb.setIcon(null);
-        btn4_4.setEnabled(Boolean.FALSE);
+        aktivGomb = btn4_4;
+        gombKezelo(aktivGomb);
+        
+        
     }//GEN-LAST:event_btn4_4ActionPerformed
 
     public static void main(String args[]) {
